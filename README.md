@@ -55,6 +55,7 @@ childcare/
 
 2. 运行程序：
    ```bash
+   cp .env.example .env
    python -m src.main
    ```
 
