@@ -1,0 +1,33 @@
+[project]
+name = "childcare"
+version = "0.1.0"
+description = "An AI-powered childcare assistant"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+dependencies = [
+    "openai>=1.12.0",
+    "python-dotenv>=1.0.0",
+    "loguru>=0.7.2",
+    "pydantic>=2.6.1",
+    "pydantic-settings>=2.2.1",
+    "fastapi>=0.109.2",
+    "uvicorn>=0.27.1",
+    "scikit-learn>=1.4.0",  # 用于意图识别
+    "numpy>=1.26.3",
+    "pandas>=2.2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
